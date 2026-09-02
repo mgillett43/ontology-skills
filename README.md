@@ -52,7 +52,7 @@ For personal use across all your projects, copy it to `~/.claude/skills/` instea
 
 Cowork sessions do **not** read `~/.claude/skills/` from your machine — they load the skills enabled on your claude.ai account. So upload it instead:
 
-1. Download `ontology-building.zip` from the [latest release](https://github.com/mgillett43/ontology-skills/releases), or build it with `./scripts/build-zip.sh`
+1. Download **[ontology-building.zip](https://github.com/mgillett43/ontology-skills/releases/latest/download/ontology-building.zip)** (always the latest release), or build it yourself with `./scripts/build-zip.sh`
 2. In the Claude Desktop app sidebar (or claude.ai settings), go to **Customize → Skills**
 3. Click **+**, choose **Create skill**, and upload the ZIP
 4. Enable it
