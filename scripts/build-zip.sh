@@ -23,12 +23,15 @@ mkdir -p "$DIST"
 rm -f "$DIST/$SKILL_NAME.zip"
 
 # Copy the skill into a clean staging dir, dereferencing any symlinks so the
-# archive is self-contained.
+# archive is self-contained. LICENSE lives inside the skill directory (matching
+# the convention used by Anthropic's own skills), so the terms travel with the
+# skill however it is distributed -- plugin install, folder copy, or this ZIP.
 cp -RL "$SRC" "$STAGE/$SKILL_NAME"
 
-# Ship the license inside the archive: CC BY 4.0 makes attribution a condition,
-# so the terms must travel with the skill when it's uploaded standalone.
-cp "$REPO_ROOT/LICENSE" "$STAGE/$SKILL_NAME/LICENSE"
+if [[ ! -f "$STAGE/$SKILL_NAME/LICENSE" ]]; then
+  echo "error: LICENSE missing from $SRC" >&2
+  exit 1
+fi
 
 # Drop macOS cruft before archiving.
 find "$STAGE" -name '.DS_Store' -delete
