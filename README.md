@@ -97,6 +97,12 @@ This skill synthesises publicly documented methodologies and describes them in i
 
 Named organisations, standards, and products are referenced descriptively, from their public documentation and published commentary about them.
 
+### On the packaging
+
+The sources above shaped what this skill *says*. Its *shape* owes a debt of its own: the lean orchestrator over reference files loaded on demand, references kept one level deep, the frontmatter conventions, and the guidance on writing a description that triggers reliably all follow Anthropic's published [Agent Skills documentation](https://code.claude.com/docs/en/skills) and [skill-authoring best practices](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices). The convention of shipping the licence inside the skill directory is taken from Anthropic's own [public skills repository](https://github.com/anthropics/skills).
+
+This project is independent, and is not affiliated with or endorsed by Anthropic.
+
 ## License
 
 [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE) © 2026 Mark Gillett
