@@ -84,7 +84,7 @@ scripts/build-zip.sh                     # produces dist/ontology-building.zip,
 
 ## Status
 
-**v0.1.0.** The methodology is complete and internally consistent; `examples.md` currently holds worked-example *skeletons* rather than filled examples, and will be populated from real runs. Issues and PRs welcome — particularly worked examples, and any conflict between source lineages that the precedence table doesn't yet resolve.
+**v0.2.0.** The methodology is complete and internally consistent; `examples.md` currently holds worked-example *skeletons* rather than filled examples, and will be populated from real runs. Issues and PRs welcome — particularly worked examples, and any conflict between source lineages that the precedence table doesn't yet resolve.
 
 ## Acknowledgements and attribution
 
