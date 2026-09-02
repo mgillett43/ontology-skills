@@ -81,7 +81,17 @@ scripts/build-zip.sh                     # produces dist/ontology-building.zip
 
 **v0.1.0.** The methodology is complete and internally consistent; `examples.md` currently holds worked-example *skeletons* rather than filled examples, and will be populated from real runs. Issues and PRs welcome — particularly worked examples, and any conflict between source lineages that the precedence table doesn't yet resolve.
 
-## Attribution
+## Acknowledgements and attribution
+
+Standing on the shoulders of giants.
+
+My own involvement with this space goes back to RDF in the late 1990s, and a very great deal of work has been done since. Coming back to metadata and ontologies after a gap of nearly thirty years, what struck me was not how much had changed but how much had been *settled* — questions I remembered as live arguments now have careful answers, tested patterns, and hard-won cautions attached to them, contributed by people who did the work and published what they learned.
+
+Like so much of what we all build on the internet, this relies on the thought that precedes it, and benefits from review, contribution, and critique in the open. My thanks to everyone whose published work is synthesised here. The compressions, and any errors, are mine — and I would much rather hear about them than not.
+
+This is a small contribution. My hope is simply that it lets others make progress without repeating the catch-up I have done over these past months.
+
+### Sources
 
 This skill synthesises publicly documented methodologies and describes them in its own words; it does not reproduce their text. Principal sources are listed in `references/conflicts-and-precedence.md` and include: Noy & McGuinness's *Ontology Development 101*; Gruber's ontology design criteria; Guarino & Welty's OntoClean and Guizzardi's UFO/OntoUML; METHONTOLOGY and related lifecycle methodologies; Uschold & Grüninger on competency questions; Moody's conceptual-model quality framework; the OOPS! pitfall catalogue and the Ontology Design Patterns community; Evans' and Vernon's Domain-Driven Design; Chen's ER modelling; Halpin's ORM; Kimball and Inmon on warehouse modelling; Silverston's universal data patterns; the OBO Foundry principles; FIBO; Semantic Arts' *gist*; Fowler on refactoring; Palantir's published Foundry/AIP ontology documentation; and current industrial knowledge-graph and GraphRAG practice.
 
