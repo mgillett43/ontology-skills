@@ -11,6 +11,7 @@ Copy the relevant template or checklist into your own working docs; these are st
 - Checklist: definition quality
 - Checklist: attribute naming
 - Checklist: attribute discovery at a node
+- Checklist: per-entity category and relation sweep
 - Checklist: reify or not
 - Checklist: Build mode
 - Checklist: Extend mode (impact-and-overlap review)
@@ -126,6 +127,22 @@ Prompts to run against each candidate entity — assembled from Ontology 101's p
 - [ ] Derivable attributes computed, not stored (core principle 3)
 - [ ] Placement check: does this belong here, or on the parent/seat (placement-by-stability)?
 - [ ] Identity contribution: part of the natural key? (Keep as property with uniqueness check — `references/formalism-and-semantics.md`)
+
+## Checklist: per-entity category and relation sweep
+
+Run inline as constructs are minted (ask only what changes a decision), or as a periodic pass over a region. Plain-language questions only — the formal crosswalk is in `references/categories-and-relations.md` and is for alignment work, not conversation.
+
+For each entity in scope:
+
+- [ ] **Is it a thing, or something that happens?** If it happens: grain declared, and participants named
+- [ ] **What are the ways it *is*?** Attributes vs. anything needing its own history, measurement provenance, or identity
+- [ ] **What can it do, or get treated as, without doing it now?** And which flavour — capability (goes away only if the thing changes), purpose (what it's *for*; survives malfunction), or role (contextual; goes away with no change to the thing)
+- [ ] **When those get exercised, is there an event worth modelling?** If it changes the world → tag as action-candidate
+- [ ] **Where is it?** Place modelled or labelled; located-in vs. part-of not conflated; part-of not overloaded across component / member / portion / stage / material
+- [ ] **When is it true?** Temporal rung chosen; valid vs. transaction time stated
+- [ ] **Is it *about* something?** Plain aboutness relation, or a full statement layer — don't reach for the heavier one by default
+
+Log gaps rather than fixing inline during a sweep; order and group them before changing anything (`references/refactoring-and-evolution.md`).
 
 ## Checklist: reify or not
 

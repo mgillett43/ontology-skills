@@ -59,6 +59,8 @@ Use these when the is-a litmus test alone doesn't resolve a hard case, or to exp
 - **Unity** — does the class have a well-defined notion of parts and wholeness? ("Lake" has unity; "amount of water" doesn't.)
 - **Dependence** — does an instance's existence require the existence of some other, external entity? (A Role like "Student" depends on an institution existing; a Type usually doesn't depend on anything external.)
 
+For the plain-language version of these distinctions — usable with someone who doesn't want the vocabulary — see `categories-and-relations.md`, which also covers the capability/purpose/role three-way split that rigidity alone doesn't separate.
+
 **The constraint that resolves most real hierarchy disputes:** a rigid class cannot be a subclass of an anti-rigid one (a Type cannot be a subtype of a Role), and a class with unity cannot be subsumed by one without unity. In practice: if what you're modeling is really a role or a phase (anti-rigid), don't rigidly subclass it under the entity that plays it — use composition, an interface, or a separate linked "role assignment" construct instead. This is the actual justification for "prefer composition over deep hierarchy" — it's not a blanket anti-hierarchy stance, it's a rigidity check. When modeling a dependence relation itself, point it from the dependent class to what it depends on, not the reverse — this keeps the relation's direction consistent with which side would stop making sense first if the other were removed.
 
 ## Property and relation placement
