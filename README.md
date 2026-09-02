@@ -10,7 +10,7 @@ Guidance on ontology design is scattered across lineages that rarely talk to eac
 
 The work of ontology building is still essentially 'human', but the universe of those with experience remains small, so tools that help more people engage in the process of capturing domains with logical structure help build the rails for AI.
 
-This skill synthesises multiple facets of the approach into a single process and, where they genuinely conflict, says so explicitly and gives a precedence rule. `references/conflicts-and-precedence.md` documents twelve such conflicts and their resolutions.
+This skill synthesises multiple facets of the approach into a single process and, where they genuinely conflict, says so explicitly and gives a precedence rule. `references/conflicts-and-precedence.md` documents eleven such conflicts and their resolutions.
 
 ## What's in it
 
@@ -22,11 +22,12 @@ Four **operating modes** — Build, Extend, Review/audit, and Refactor — over 
 - **Definition-writing discipline** — genus-differentia, necessary vs. sufficient conditions, the substitutability test, elucidations for primitives
 - **A consolidated anti-pattern catalogue** drawn from academic, practitioner, and production-governance sources
 - **Two conditional extensions**, each with a cheap hook in the base process so neither is expensive to retrofit: agent-actionability (governed actions, retrieval design) and statement/provenance (when sources disagree)
+- **Seven per-entity checks** in plain language — thing or happening, what inheres in it, where and when it is, what it's about — usable inline or as a periodic sweep, with the formal vocabulary confined to a crosswalk
 - **Situational guidance**: open- vs. closed-world semantics, class hierarchy vs. concept scheme, temporality and change, bounded contexts and multi-team governance, schema-informed discovery, LLM-assisted construction
 - **A Fowler-style refactoring catalogue** — 25 named refactorings with triggers, breaking-change classification by context-map seam, deprecation policy
 - **Copy-ready templates and checklists** for every mode
 
-Everything lives behind progressive disclosure: `SKILL.md` is the ~120-line orchestrator; the fifteen reference files load only when the work calls for them.
+Everything lives behind progressive disclosure: `SKILL.md` is a ~125-line orchestrator; the sixteen reference files load only when the work calls for them.
 
 ## Install
 
@@ -75,8 +76,10 @@ plugins/ontology-building/
     ├── SKILL.md
     ├── templates.md
     ├── examples.md
+    ├── LICENSE
     └── references/*.md
-scripts/build-zip.sh                     # produces dist/ontology-building.zip
+scripts/build-zip.sh                     # produces dist/ontology-building.zip,
+                                         # stamped with version and build commit
 ```
 
 ## Status
