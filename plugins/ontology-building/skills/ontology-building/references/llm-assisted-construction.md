@@ -10,9 +10,24 @@ Treat all LLM-proposed structure as a candidate hypothesis — never a direct ed
 
 - **Fabrication / hallucinated relations.** Structured-extraction tasks have reported fabrication rates in some fields exceeding 90% — don't assume a plausible-looking relation is a real one without independent verification.
 - **Flattening.** LLM-generated hierarchies tend to under-nest relative to real domain structure — flat lists of siblings where a real intermediate category should exist. Check output against the sibling-generality and subclass-count heuristics (`hierarchy-and-structure.md`) specifically, since this is where LLM output most often fails them.
+- **Tangling — the mirror of flattening, and the one that survives review.** Where flattening under-nests, extraction across several sources tends to *over-parent*: classes acquiring three, four, five parents. Watch for it specifically, because unlike flattening it doesn't look wrong. Every individual `is-a` edge is locally plausible; the defect is only visible in the combination, so edge-by-edge review passes it straight through. Run the multiple-parent test (`hierarchy-and-structure.md`) on anything LLM-generated, and check the distribution of parent counts across the whole output rather than case by case.
 - **Prompt sensitivity.** Minor wording changes to the same generation prompt have been shown to produce materially different structures. Don't trust a single generation pass — regenerate with varied phrasing and diff the results; convergence across variations is a much stronger signal than any single output.
 - **Cascading error from early mistakes.** An entity-recognition error early in a pipeline propagates and tends to dominate downstream error more than a modeling mistake made later — invest review effort at the earliest extraction stage, not just at the final schema.
 - **Error scales with ontological complexity, not model size.** A bigger or more capable model does not reliably fix this — the failure mode is intrinsic to how much structure is being asked for in one pass, not to model capability. Break large asks into smaller, independently-checkable ones rather than expecting scale to solve it.
+
+## Reversing an ontology out of several documents
+
+The highest-risk variant of LLM-assisted construction, and it fails in a characteristic way.
+
+**The mechanism.** Each source frames the same subject in its own vocabulary — one document's *Customer* is another's *Party* is another's *Counterparty*, and each carries a slightly different boundary. Faced with two sources that classify the same thing differently, an LLM's default is to **accommodate rather than adjudicate**: it asserts both classifications rather than surfacing the disagreement as a decision to be made. The result looks like multiple inheritance but is really unresolved synonymy, unreconciled granularity, and roles-as-types, all compounded — and it accumulates silently, one reasonable-looking edge at a time.
+
+**Work source-by-source, then reconcile as a distinct, visible step.**
+
+- Extract from each document **separately**, and keep the results separate. Do not ask for a merged model in one pass — a single pass is where accommodation happens, invisibly.
+- **Tag every candidate construct with its source.** This is what makes the provenance leg of the multiple-parent test possible later; without it, you cannot tell a genuine cross-cutting type from two documents disagreeing.
+- Reconcile as its own pass, and make each merge an explicit call: same concept under different names (resolve to one, map the rest), genuinely different concepts that happen to share a name (keep both, disambiguate), same concept at different granularity (pick the level), or a role that one document treats as a type (extract the role).
+- **Where sources genuinely disagree, that is a finding, not a merge problem.** Surface it as an open issue for a human to settle — the same rule as a competency question conflicting with a schema requirement (`SKILL.md` step 2). A disagreement quietly absorbed into the hierarchy is a decision made by nobody.
+- Where documents carry real authority differences — a standard versus a team's working note — record which source won and why, rather than letting recency or ordering decide.
 
 ## Mitigations
 

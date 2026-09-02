@@ -184,6 +184,7 @@ Consolidates the W3C n-ary-relations criteria, UFO's relator, and this skill's t
 - [ ] Inventory: classes, relations, hierarchies, undocumented conventions
 - [ ] Intent recovered: implicit CQs reconstructed from consumers/queries/docs; answerability graded
 - [ ] Mechanical taxonomy pass: is-a litmus, rigidity, cycles, sibling generality, orphans, missing domains/ranges/disjointness
+- [ ] Parent-count distribution checked; every class with more than one parent run through the multiple-parent test (litmus each parent, rigidity, contribution, latent disjointness, provenance)
 - [ ] Definition audit: undefined terms, circular/negative/"is when" defects, genus-vs-asserted-parent mismatches; consumer documentation present for each audience
 - [ ] Anti-pattern sweep in catalogue order (taxonomic → structural → process → LLM-specific if applicable)
 - [ ] Temporal/semantics audit: which date properties mean valid vs. transaction time; where closed-world assumptions are silent

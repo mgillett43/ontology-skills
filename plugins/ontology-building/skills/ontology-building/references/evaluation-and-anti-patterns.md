@@ -47,6 +47,7 @@ Grouped by where each one tends to originate; most have both an academic name an
 - **Redundancy** — axioms/assertions already entailed by others, adding no semantics, only bloat.
 - **Subsumption/instantiation confusion** — modeling an individual as a subclass rather than an instance, or vice versa.
 - **Rigid class subsuming an anti-rigid one** — a role or phase (Student, Larva) rigidly subclassed as if it were a permanent type. See `hierarchy-and-structure.md`'s OntoClean section.
+- **Tangled hierarchy** — classes accumulating multiple parents that don't survive scrutiny: near-synonyms from different sources made co-parents, roles parented as types, or parents spanning granularity levels. Locally every edge looks fine, so it passes edge-by-edge review; check parent-count distribution across the model and run the multiple-parent test (`hierarchy-and-structure.md`). Especially common when a model has been reversed out of several documents (`llm-assisted-construction.md`).
 - **Inconsistent granularity** — mixing coarse- and fine-grained concepts at the same taxonomic level.
 - **Part-of / is-a conflation** — modeling a meronomic (part-whole) relationship as a subclass hierarchy, or vice versa.
 - **Overloaded relations** — a single generic relation ("has", "related-to") silently meaning structurally different things in different contexts.
@@ -80,7 +81,7 @@ Grouped by where each one tends to originate; most have both an academic name an
 - **Granularity mismatch when aligning to an external taxonomy** — forcing a 1:1 correspondence between tiers that don't actually align level-for-level, either losing real distinctions or importing false precision. See `reuse-and-alignment.md`.
 - **Schema-constraint literalism** — treating an existing/target schema's incidental physical constraint (a `NOT NULL` column, a legacy nullable field, a denormalized shape) as direct proof of a conceptual fact, in either direction. A storage-layer constraint is evidence to weigh, not a conclusion to inherit. See `schema-informed-discovery.md`.
 
-**LLM-construction-specific anti-patterns** (relevant only when an LLM assists in generating candidate structure — see `llm-assisted-construction.md` for the full treatment): fabricated/hallucinated relations, flattened hierarchies, high sensitivity to prompt wording, and error rates that scale with ontological complexity rather than with model size.
+**LLM-construction-specific anti-patterns** (relevant only when an LLM assists in generating candidate structure — see `llm-assisted-construction.md` for the full treatment): fabricated/hallucinated relations, flattened hierarchies, tangled hierarchies from multi-source extraction, high sensitivity to prompt wording, and error rates that scale with ontological complexity rather than with model size.
 
 ## Using this checklist
 
