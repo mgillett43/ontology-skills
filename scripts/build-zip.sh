@@ -26,6 +26,10 @@ rm -f "$DIST/$SKILL_NAME.zip"
 # archive is self-contained.
 cp -RL "$SRC" "$STAGE/$SKILL_NAME"
 
+# Ship the license inside the archive: CC BY 4.0 makes attribution a condition,
+# so the terms must travel with the skill when it's uploaded standalone.
+cp "$REPO_ROOT/LICENSE" "$STAGE/$SKILL_NAME/LICENSE"
+
 # Drop macOS cruft before archiving.
 find "$STAGE" -name '.DS_Store' -delete
 

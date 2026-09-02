@@ -89,4 +89,10 @@ Named organisations, standards, and products are referenced descriptively, from 
 
 ## License
 
-[MIT](LICENSE) © 2026 Mark Gillett
+[Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE) © 2026 Mark Gillett
+
+You are free to use, adapt, and redistribute this material — including commercially, and including inside your own skills, plugins, or internal documentation — provided you give appropriate credit, link to the license, and indicate if changes were made.
+
+Suggested attribution:
+
+> Based on [ontology-building](https://github.com/mgillett43/ontology-skills) by Mark Gillett, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
