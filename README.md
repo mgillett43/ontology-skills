@@ -31,9 +31,20 @@ Everything lives behind progressive disclosure: `SKILL.md` is a ~125-line orches
 
 ## Install
 
-### Claude Code — manual (simplest)
+### Claude Code — point it at this repo (easiest)
 
-Download and unzip into your personal skills directory. Available in every project:
+Two commands, typed inside Claude Code:
+
+```
+/plugin marketplace add mgillett43/ontology-skills
+/plugin install ontology-building@ontology-skills
+```
+
+"Marketplace" here just means this git repository — there is no public listing or registry involved, and nothing is submitted anywhere. You get updates for free: `/plugin update` picks up new releases.
+
+### Claude Code — manual install
+
+If you'd rather not use the plugin system, or you want to read and modify the files directly, download and unzip into your personal skills directory:
 
 ```bash
 mkdir -p ~/.claude/skills
@@ -42,18 +53,9 @@ curl -fsSL https://github.com/mgillett43/ontology-skills/releases/latest/downloa
 unzip -q /tmp/ontology-building.zip -d ~/.claude/skills/
 ```
 
-Restart Claude Code, then check it loaded with `/skills`.
+Restart Claude Code, then check it loaded with `/skills`. This makes it available in every project; updating means repeating the download.
 
 To scope it to a single repo instead — so everyone who clones that repo gets it — unzip into `<your-repo>/.claude/skills/` and commit the result.
-
-### Claude Code — as a plugin (versioned and updatable)
-
-```
-/plugin marketplace add mgillett43/ontology-skills
-/plugin install ontology-building@ontology-skills
-```
-
-"Marketplace" here just means this git repository — there is no public listing or registry involved, and nothing is submitted anywhere. The advantage over the manual route is that `/plugin update` will pick up new releases; the cost is a little more machinery.
 
 ### Claude Cowork, Claude Desktop, and claude.ai
 
