@@ -99,9 +99,9 @@ Named organisations, standards, and products are referenced descriptively, from 
 
 ### On the packaging
 
-The sources above shaped what this skill *says*. Its *shape* owes a debt of its own: the lean orchestrator over reference files loaded on demand, references kept one level deep, the frontmatter conventions, and the guidance on writing a description that triggers reliably all follow Anthropic's published [Agent Skills documentation](https://code.claude.com/docs/en/skills) and [skill-authoring best practices](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices). The convention of shipping the licence inside the skill directory is taken from Anthropic's own [public skills repository](https://github.com/anthropics/skills).
+The sources above shaped the approach that the skill describes. Its structure and implementation draw on the pattern for a lean orchestrator over reference files loaded on demand, references kept one level deep, the frontmatter conventions, and the guidance on writing a description that triggers reliably — all of which follow Anthropic's published [Agent Skills documentation](https://code.claude.com/docs/en/skills) and [skill-authoring best practices](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices). The convention of shipping the licence inside the skill directory is taken from Anthropic's own [public skills repository](https://github.com/anthropics/skills).
 
-This project is independent, and is not affiliated with or endorsed by Anthropic.
+This effort is independent, and is not affiliated with or endorsed by Anthropic.
 
 ## License
 
