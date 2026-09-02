@@ -1,14 +1,16 @@
 # ontology-building
 
-A domain-agnostic methodology, packaged as an [Agent Skill](https://code.claude.com/docs/en/skills), for **building, extending, reviewing, and refactoring** ontologies, domain models, taxonomies, and knowledge-graph schemas.
+A domain-agnostic methodology, packaged as an [Agent Skill](https://code.claude.com/docs/en/skills), to assist in **building, extending, reviewing, and refactoring** ontologies, domain models, taxonomies, and knowledge-graph schemas.
 
-It is deliberately independent of what you encode the result in — OWL, a property graph, a relational schema, typed code, or a platform object model. The methodology decides *what should exist and why*; the encoding comes after.
+It is deliberately independent of what you encode the result in, whether OWL, a property graph, a relational schema, typed code, or a platform object model. The approach encourages a focus on *what should exist and why*; the encoding comes after.
 
 ## Why this exists
 
 Guidance on ontology design is scattered across lineages that rarely talk to each other: the classical knowledge-representation literature, formal ontology theory, enterprise conceptual modelling, large-scale multi-team ontology governance, and — more recently — the practice of building models that AI agents read and act on. They agree more than they disagree, but where they disagree, most write-ups quietly pick a side.
 
-This skill synthesises them into a single process and, where they genuinely conflict, says so explicitly and gives a precedence rule. `references/conflicts-and-precedence.md` documents twelve such conflicts and their resolutions.
+The work of ontology building is still essentially 'human', but the universe of those with experience remains small, so tools that help more people engage in the process of capturing domains with logical structure help build the rails for AI.
+
+This skill synthesises multiple facets of the approach into a single process and, where they genuinely conflict, says so explicitly and gives a precedence rule. `references/conflicts-and-precedence.md` documents twelve such conflicts and their resolutions.
 
 ## What's in it
 
@@ -59,7 +61,7 @@ Cowork sessions do **not** read `~/.claude/skills/` from your machine — they l
 
 ## Using it
 
-Claude invokes the skill automatically when you ask for work it covers — designing a data model, building a taxonomy, modelling a domain, defining a class hierarchy, or auditing an existing model. You can also invoke it directly with `/ontology-building`.
+Claude should invoke the skill automatically when you ask for work it covers — designing a data model, building a taxonomy, modelling a domain, defining a class hierarchy, or auditing an existing model. You can also invoke it directly with `/ontology-building`.
 
 Start by telling it which mode you're in and what you're modelling. It will ask for competency questions in your own words rather than inventing them, and will surface contested design calls as decisions with a recommendation and its accepted cost.
 
