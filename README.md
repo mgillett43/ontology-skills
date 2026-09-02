@@ -31,25 +31,29 @@ Everything lives behind progressive disclosure: `SKILL.md` is a ~125-line orches
 
 ## Install
 
-### Claude Code — as a plugin (recommended; versioned and updatable)
+### Claude Code — manual (simplest)
+
+Download and unzip into your personal skills directory. Available in every project:
+
+```bash
+mkdir -p ~/.claude/skills
+curl -fsSL https://github.com/mgillett43/ontology-skills/releases/latest/download/ontology-building.zip \
+  -o /tmp/ontology-building.zip
+unzip -q /tmp/ontology-building.zip -d ~/.claude/skills/
+```
+
+Restart Claude Code, then check it loaded with `/skills`.
+
+To scope it to a single repo instead — so everyone who clones that repo gets it — unzip into `<your-repo>/.claude/skills/` and commit the result.
+
+### Claude Code — as a plugin (versioned and updatable)
 
 ```
 /plugin marketplace add mgillett43/ontology-skills
 /plugin install ontology-building@ontology-skills
 ```
 
-### Claude Code — as a project skill
-
-Copy the skill folder into a repo so everyone who clones it gets the skill:
-
-```bash
-git clone https://github.com/mgillett43/ontology-skills.git
-mkdir -p your-repo/.claude/skills
-cp -R ontology-skills/plugins/ontology-building/skills/ontology-building \
-      your-repo/.claude/skills/
-```
-
-For personal use across all your projects, copy it to `~/.claude/skills/` instead.
+"Marketplace" here just means this git repository — there is no public listing or registry involved, and nothing is submitted anywhere. The advantage over the manual route is that `/plugin update` will pick up new releases; the cost is a little more machinery.
 
 ### Claude Cowork, Claude Desktop, and claude.ai
 
