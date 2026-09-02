@@ -1,0 +1,20 @@
+{
+  "name": "ontology-building",
+  "description": "A domain-agnostic methodology for building, extending, reviewing, and refactoring ontologies, domain models, taxonomies, and knowledge-graph schemas. Synthesises Stanford Ontology 101, OntoClean/UFO, Gruber's design criteria, Domain-Driven Design, OBO Foundry governance, and agent-facing platform practice into one process with explicit conflict resolution.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Mark Gillett",
+    "url": "https://github.com/mgillett43"
+  },
+  "homepage": "https://github.com/mgillett43/ontology-skills",
+  "license": "MIT",
+  "keywords": [
+    "ontology",
+    "domain-model",
+    "taxonomy",
+    "knowledge-graph",
+    "conceptual-model",
+    "domain-driven-design",
+    "data-modeling"
+  ]
+}

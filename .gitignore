@@ -1,0 +1,12 @@
+# Local Claude Code settings
+.claude/settings.local.json
+
+# Local dogfooding symlink into the canonical skill source.
+# Not committed: git on Windows without core.symlinks turns symlinks into
+# plain text files, which would silently break the skill for those users.
+.claude/skills/
+
+# Build output
+dist/
+
+.DS_Store

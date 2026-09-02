@@ -1,0 +1,15 @@
+{
+  "name": "ontology-skills",
+  "description": "Skills for ontology and domain-model engineering — building, extending, reviewing, and refactoring conceptual models, taxonomies, and knowledge-graph schemas.",
+  "owner": {
+    "name": "Mark Gillett",
+    "url": "https://github.com/mgillett43"
+  },
+  "plugins": [
+    {
+      "name": "ontology-building",
+      "source": "./plugins/ontology-building",
+      "description": "A domain-agnostic methodology for building, extending, reviewing, and refactoring ontologies, domain models, taxonomies, and knowledge-graph schemas."
+    }
+  ]
+}
